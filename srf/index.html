@@ -1,0 +1,213 @@
+<!DOCTYPE html><script type="module">function e(){window.nyState={},t()}function t(){let e=e=>{window.nyState.isXP小屏=e,document.documentElement.classList.toggle(`小屏`,e),document.documentElement.classList.toggle(`大屏`,!e)},t=matchMedia(`(max-width: 52rem)`);return t.addEventListener(`change`,t=>e(t.matches)),e(t.matches),t.matches}e();</script><html lang="cn" id="/srf/"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> --><link rel="icon" href="/favicon.ico"><!-- <meta name="generator" content={Astro.generator} /> --><title>南也输入法</title><script>
+      if ("noModule" in HTMLScriptElement.prototype === false) {
+        location.replace("/browser-unsupported.html?from=" + encodeURIComponent(location.href))
+      }
+    </script><style>*{box-sizing:border-box}body{--font-family--text:霞鹜文楷等宽, LXGW WenKai, LXGW WenKai Lite, Source Sans Pro, system-ui, -apple-system, Segoe UI, roboto, ubuntu, cantarell, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;--body-bg-color:#ffe;background-color:var(--body-bg-color);color:#130;font-family:var(--font-family--text);margin:0;line-height:1.6}.大屏 body{height:100vh;overflow:hidden}ul{padding-left:1em;list-style:none}ul.l0{padding-left:0}img{width:100%;height:100%}a,a:visited{color:#494;text-underline-offset:.3em}blockquote{background-color:#fff8f8;border-left:.5em solid #cdc;width:100%;margin-left:0}blockquote p{padding:.5em}ny-code-line{background:#efe;width:fit-content;padding:.1em .3em 0;display:flex}code{font-family:var(--font-family--text);text-spacing-trim:space-all;color:#226022;background:#efe}.大屏 li,.大屏 p{break-inside:avoid}.大屏 h1{margin-top:0}.大屏 #拆字与形码,.大屏 #按键与模式,.大屏 .new-col{break-before:column;margin-top:0}
+ny-aside-op{flex-direction:column;display:flex}ny-slide-bar{display:none}ny-aside-main{padding:0 .5em 3em;overflow:auto}.大屏 ny-aside-main{mask-image:linear-gradient(#0000,#000 1em calc(100% - 2em),#0000)}.小屏 ny-aside-main{overflow:clip}.半屏 ny-aside-main,.满屏 ny-aside-main{overflow:auto}ny-aside-main{scrollbar-width:none}ny-aside-main::-webkit-scrollbar{display:none}.大屏 ny-aside-op{border-right:1px solid #272;width:25vw;min-width:16rem;max-width:20rem}.小屏 ny-aside-op{background:linear-gradient(#0000,#fff 1.4em);width:100%;transition:top .25s;position:fixed;top:calc(100dvh - 4rem)}.小屏 ny-aside-op.半屏{height:26rem;top:max(0px,100dvh - 26rem)}.小屏 ny-aside-op.满屏{background:#fff;min-height:100dvh;top:0}.小屏 ny-aside-op.满屏>ny-slide-bar{overflow-wrap:anywhere;border:1px solid #ccc;border-radius:50%;width:3rem;height:3rem;padding:.3rem .6rem 0;position:fixed;bottom:2rem;right:2rem}.小屏 ny-aside-op>ny-slide-bar{text-align:center;cursor:pointer;user-select:none;justify-content:center;align-items:center;padding-bottom:.6em;font-size:1.25em;font-weight:900;line-height:.8;display:flex}ny-aside-layout{height:100%;display:flex}.小屏 ny-main{margin:.5em .5em 4rem}.大屏 ny-main{column-width:18rem;column-fill:auto;scrollbar-width:none;column-gap:2.4em;width:100%;padding:.5em 2em 2em;overflow-x:auto;mask-image:linear-gradient(90deg,#0000,#000 2em calc(100% - 2em),#0000)}.大屏 ny-main::-webkit-scrollbar{display:none}ul.l0{font-size:1.25em}ny-aside-op ul ul{font-size:.8em}.小屏 ny-aside-op ul.l0{margin-top:0}ny-main ul{list-style:revert}
+</style><script type="module" src="/_astro/page.CZ9xv0XX.js"></script></head><body><script type="module">var e=class extends HTMLElement{init=!1;connectedCallback(){this.init||(this.init=!0,this.setAttribute(`role`,`main`),window.nyState.isXP小屏||this.addEventListener(`wheel`,e=>{e.deltaX||this.scrollTo({left:this.scrollLeft+e.deltaY*4,behavior:`smooth`})}))}};customElements.get(`ny-main`)||customElements.define(`ny-main`,e);</script><script type="module">function e(e,t){if(!window.nyState.isXP小屏)return;let[n,r,i,a,o]=[-1,0,0,0,0];e.addEventListener(`touchcancel`,()=>n=-1),e.addEventListener(`touchstart`,t=>{let s=t.touches[0];[n,r,i,a,o]=[s.identifier,s.clientX,s.clientY,e.scrollLeft,e.scrollTop]}),e.addEventListener(`touchend`,s=>{let c=Array.from(s.changedTouches).find(e=>e.identifier===n);if(!c)return;n=-1;let[l,u]=[c.clientX-r,c.clientY-i],[d,f]=[Math.abs(l),Math.abs(u)],[p,m]=d>f?[!0,d]:[!1,f];if(m<54)return;let h=p?l>0?a<=0&&`Z左`:a+e.clientWidth>=e.scrollWidth&&`Y右`:u>0?o<=0&&`X下`:o+e.clientHeight>=e.scrollHeight&&`S上`;h&&t(h)})}var t=class extends HTMLElement{init=!1;connectedCallback(){if(this.init)return;this.init=!0,this.setAttribute(`role`,`aside`);let[t,n]=this.children,r=0;e(n,e=>{e===`S上`&&r===0?(r=50,this.classList.add(`半屏`)):e==`X下`&&(r=0,t.textContent=`︿`,this.classList.remove(`半屏`),this.classList.remove(`满屏`))}),t.addEventListener(`click`,()=>{r===0?(r=50,this.classList.add(`半屏`)):r===50?(r=100,t.textContent=`━﹀`,this.classList.replace(`半屏`,`满屏`)):(r=0,t.textContent=`︿`,this.classList.remove(`半屏`),this.classList.remove(`满屏`))})}};customElements.get(`ny-aside-op`)||customElements.define(`ny-aside-op`,t);</script><ny-aside-layout><ny-aside-op><ny-slide-bar> ︿ </ny-slide-bar><ny-aside-main><ul class="l0"><li>南也输入法<ul><li>快速开始</li><li>下载安装</li><hr><li>编码规则</li><li>拆字规则</li><li>选码规则</li><li>参考册</li><hr><li>反馈支持</li><li>开发计划</li><hr><li>版本日志</li><li>开发日志</li><li>开发技术</li></ul></li><hr><li>赞助</li><li>关于</li><li>联系我们</li></ul></ny-aside-main></ny-aside-op><ny-main><h1 id="南也输入法快速开始">南也输入法‐快速开始</h1>
+<p>音形输入法、40个编码按键
+<img  src="/_astro/srf_t.kBW14Y-j_ZY3jKw.webp" alt="srf_ui" loading="lazy" decoding="async" width="877" height="369"></p>
+<h2 id="安装使用">安装使用</h2>
+<details> <summary>点击展开</summary>
+<ul>
+<li>访问 <a href="https://docs.qq.com/space/DQ3pvSVhzcVF5SnFw?mode=wiki_mode">https://docs.qq.com/space/DQ3pvSVhzcVF5SnFw?mode=wiki_mode</a></li>
+<li>左侧栏，下载 <code>NanYe.Srf_2X.X.XXXX_x64-setup.exe-</code></li>
+<li>重命名，为 <code>.exe</code> 格式，运行。同意服务后，点击 <code>X</code> 关闭窗口</li>
+<li>Win + 空格，空格空格，切换到<code>南也输入法</code></li>
+</ul>
+</details>
+<h2 id="快速认识">快速认识</h2>
+<ul>
+<li>拼音打<code>情绪</code>是 <code>qingxu</code></li>
+<li>本输入法是：<code>qx忄月纟日</code>
+<ul>
+<li><code>qx</code> 是声母，叫<code>音码</code></li>
+<li><code>忄月纟日</code>是<code>情绪</code>两个字的拆解，取每个字的前后字形（部首、笔画），叫<code>形码</code></li>
+<li><code>忄月纟日</code>这4个<code>形码</code>对应键盘上的按键编码</li>
+<li><code>忄月纟日</code>这4个<code>形码</code>不是要完全输入的，一般两三个<code>形码</code>后就上屏了</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>不要急试着打字，继续看<br>
+<strong>不用记住</strong>全部形码（字根），有提示</p>
+</blockquote>
+<h2 id="按键与模式">按键与模式</h2>
+<h3 id="音码20个声母">音码20个声母</h3>
+<ul>
+<li>26个字母中，<code>aevuio</code> 6个不作为声母<code>音码</code>，只有20个声母作为<code>音码</code></li>
+<li>声母按键对应 <code>zh: z</code>、<code>ch: c</code>、<code>sh: s</code></li>
+<li><code>a、e、o</code> 另作对应按键：<code>r</code>。举例（音形编码）：
+<ul>
+<li><code>阿: r 阝可</code>、<code>傲: r 亻攵</code>、<code>按: r 扌女</code></li>
+<li><code>额: r 宀贝</code>、<code>儿: r 儿</code>、<code>恩: r 口心</code></li>
+<li><code>哦: r 口戈</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="形码按键40个">形码按键40个</h3>
+<ul>
+<li>本输入法把字进行字形拆分为<code>形码</code>，有部首、形状、笔画</li>
+<li>一共125个分布安排在40个按键上，一个按键最多不会超过4个<code>形码</code></li>
+<li>40个按键有 <code>A-Z</code> 的26个字母、<code>0~9</code> 的10个和<code>，。？；</code>的4个符号键</li>
+<li><code>AEVUIO</code>6个键是作为<code>形码按键</code>的。也就是除去20个<code>音码按键</code>，有20个<strong>专属</strong>的<code>形码按键</code></li>
+</ul>
+<h3 id="形码模式">形码模式</h3>
+<ul>
+<li><code>模: m 木大</code>这个字打法：
+<ul>
+<li>声母<code>m</code></li>
+<li>形码<code>木</code>对应按键<code>7</code>，直接进入<code>形码模式</code>，此时20个<code>音码按键</code>就是<code>形码按键</code>了</li>
+<li>形码<code>大</code>对应按键<code>M</code>，<code>M</code>键此时不表示<code>声母</code></li>
+</ul>
+</li>
+<li><code>式: s 工弋</code>这个字打法：
+<ul>
+<li>声母<code>s</code></li>
+<li>形码<code>工</code>对应按键<code>Q</code>，此时直接按<code>Q</code>是表示<code>音码按键</code>
+<ul>
+<li>要先按<code>'</code>键或<code>Shift</code>键，进入<code>形码模式</code></li>
+<li>再按下<code>Q</code>键</li>
+</ul>
+</li>
+<li>形码<code>弋</code>对应按键<code>S</code></li>
+</ul>
+</li>
+<li><code>魔法: mf 广厶氵厶</code>这个词的打法：
+<ul>
+<li>音码序列<code>mf</code>，形码序列<code>广厶氵厶</code></li>
+<li>先按下<code>M</code>、<code>F</code>按键</li>
+<li>再按下<code>氵</code>对应按键<code>，</code>，进入<code>形码模式</code></li>
+<li>再按下<code>广</code>对应按键<code>K</code>，形码序列是<strong>跳序的环</strong></li>
+</ul>
+</li>
+<li><code>羊毛: ym羊毛</code>这个词的打法：
+<ul>
+<li>需要手动进入形码模式，使用<code>'</code>键或<code>Shift</code>键</li>
+<li>按键序列<code>YM'YR</code></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>不要着急试着打其他字，先看完基础</p>
+</blockquote>
+<h3 id="打词与打字是不同的">打词与打字是不同的</h3>
+<ul>
+<li>打词，先输入 <code>N</code> 个声母
+<ul>
+<li>再输入这个词的任意一个形码，进入<code>形码模式</code><strong>筛选</strong></li>
+<li>词的形码序列是<strong>跳序筛选</strong>的，第一个形码是<strong>环的起点</strong></li>
+<li>当形码筛选出唯一候选就立即上屏</li>
+</ul>
+</li>
+<li>打字，先输入一个声母，再输入形码
+<ul>
+<li>字的形码序列<strong>有序输入</strong>的，不能跳过</li>
+<li>必要时需要使用<code>'</code>键或<code>Shift</code>键切换<code>形码模式</code>。</li>
+<li>字的形码最少1个，最多3个，大部分是2个。如：
+<ul>
+<li><code>口: K 口</code></li>
+<li><code>嘿: H 口 灬</code></li>
+<li><code>嗐: H 口 口 宀</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>编码说明：
+<ul>
+<li><code>字</code>由<code>1</code>个音码和<code>1~3</code>个形码组成，形码序列是<strong>有序不可跳过</strong></li>
+<li><code>N字词</code>由<code>N</code>个音码和<code>N~2N</code>个形码组成，每个字的<code>前形</code>、<code>后形</code>组成的，不包含字的<code>选码</code>；形码序列是<strong>跳序筛选</strong>的，第一个形码是<strong>环的起点</strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>详细请看<a href="/srf/doc/bmgz">编码规则</a></p>
+</blockquote>
+<h3 id="界面说明">界面说明</h3>
+<p><img  src="/_astro/srf_jmsm.CnqHdfOj_oxVJ8.webp" alt="srf_jmsm" loading="lazy" decoding="async" width="889" height="637"></p>
+<h2 id="拆字与形码">拆字与形码</h2>
+<h3 id="拆分形码">拆分形码</h3>
+<ul>
+<li><strong>字</strong>拆分形码关键是<code>二分</code>，连续拆分到小部件。举例：
+<ul>
+<li><code>藻</code>二分<code>艹澡</code>，<code>澡</code>二分<code>氵喿</code>，<code>喿</code>二分<code>品木</code>，<code>品</code>二分<code>口吅</code></li>
+<li>最终<code>藻</code>形码拆分为<code>艹氵口口口木</code></li>
+</ul>
+</li>
+<li>一个字取前后两个形码，分别叫<code>前形</code>、<code>后形</code></li>
+<li>某些字需要第三个形码，叫<code>选形</code>。如<code>辩</code>和<code>辫</code>的选形分别是<code>讠</code>和<code>纟</code></li>
+</ul>
+<h3 id="结构拆分">结构拆分</h3>
+<ul>
+<li>大部分字结构是清晰可辨的，字可以分为12种结构：
+<ny-code-line> ⿰ ⿲ ⿱ ⿳ ⿴ ⿵ ⿶ ⿷ ⿸ ⿹ ⿺ ⿻ </ny-code-line></li>
+<li><code>⿰ ⿲ ⿱ ⿳ ⿶</code>按照书写顺序拆分。如：<code>村 树 音 意 凶</code></li>
+<li><code>⿴ ⿵ ⿷ ⿸ ⿹</code>按照外里顺序拆分。如：<code>圆 阀 匿 磨 司</code>
+<!-- 码表待办：卣 ⺊ Zh 口；巨 匚 ZH -->
+
+</li>
+<li><code>⿺</code>按照外里顺序拆分，会有书写顺序不同。如：<code>这 建 廷 超 匙 魈 毡</code>；“<code>断</code>”字<code>前形</code>不是<code>米</code>，而是<code>𠃊</code></li>
+<li><code>⿻</code>表示嵌套字或独体字，会以笔画拆分，后文说明</li>
+</ul>
+<h3 id="笔画拆分">笔画拆分</h3>
+<ul>
+<li>字形也有结构不清晰的，将会使用笔画来拆分</li>
+<li>结构不清晰拆分
+<ul>
+<li>todo</li>
+</ul>
+</li>
+</ul>
+<h3 id="特殊拆分">特殊拆分</h3>
+<ul>
+<li>会有一些字特殊拆分，这里简述说明：</li>
+<li>嵌套拆分：<code>坐: 人人土</code>、<code>巫: 工人人</code>、<code>幽: 幺幺山</code>、<code>噩: 王口口口口</code>、<code>爽: 大乂乂乂乂</code>、<code>奭: 大百百</code></li>
+<li>上下切分：<code>出: 山山</code>、<code>里: 田土</code>、<code>果: 田木</code>、<code>单: 丷田十</code>、<code>禺: 田SZSHD</code>、<code>农: 冖𧘇</code>、<code>隺: 冖隹</code></li>
+<li>左右切分: <code>我: PHSH戈</code>、<code>式: 工弋</code>、<code>戊: HP戈</code>、<code>成: HPZ戈</code>、<code>咸: HP一口戈</code>、<code>栽: 土木戈</code></li>
+</ul>
+<!-- - 连戈切分: `我 戊 成` -->
+<blockquote>
+<p>详情查阅<a href="/srf/doc/czgz拆字规则">拆字规则</a>、<a href="/srf/doc/tcb特拆表">特拆表</a></p>
+</blockquote>
+<!-- <details> <summary>点击展开</summary>
+  <table border="1" >
+  <thead> <tr> <th>规则</th> <th>字</th> <th>拆分序列</th> </tr> </thead>
+  <tbody>
+    <tr> <td rowspan="5">嵌套拆分</td> <td>坐</td> <td>人人土</td> </tr> 
+    <tr> <td>幽</td> <td>幺幺山</td> </tr> 
+    <tr> <td>噩</td> <td>王口口口口</td></tr>
+    <tr> <td>爽</td> <td>大乂乂乂乂</td></tr>
+    <tr> <td>奭</td> <td>大百百</td></tr>
+    <tr> <td rowspan="1">上下切分</td> <td>里</td> <td>人人土</td> </tr> 
+    <tr> <td rowspan="1">左右切分</td> <td>裁</td> <td>人人土</td> </tr>
+    <tr> <td rowspan="1">戊形拆分</td> <td>成</td> <td>人人土</td> </tr>
+  </tbody>
+  </table>
+</details> -->
+<!-- 形码合并 -->
+<h2 id="上限">上限</h2>
+<h3 id="按键数">按键数</h3>
+<ul>
+<li>40键（20+20）。作为程序员，盲打是无负担的</li>
+<li>30键（20+10）。计划中，上排数字键对部分用户有难度</li>
+<li>40键个人认为是最佳上限，离散大、空间大，20个形码切换模式。如果我不做别人也会做，为了上限</li>
+</ul>
+<h3 id="组合键">组合键</h3>
+<ul>
+<li><code>空格</code>组合键上屏候选栏第1个</li>
+<li><code>Shift</code>组合键上屏候选栏第2个</li>
+<li><code>Ctrl</code>组合键进入形码模式并筛选</li>
+</ul>
+<h2 id="赞助支持">赞助支持</h2>
+<ul>
+<li>项目是个人开发者维护。若其在工作或生活中为您提供了便利，需要您的赞助与支持</li>
+<li>目前属于空闲时间开发。您的赞助将会抽出更多精力和时间投入开发、加速进度</li>
+<li>还有更多细节需要完善，还有更多开发计划在进行中
+<ul>
+<li>Bug 修复，使用体验优化，码表、词库的更新</li>
+<li>iOS 端、安卓端支持（漫长计划，如果全职将会更快）</li>
+<li>更多输入方案还在筹备中：30键位、繁体、注音、符号等</li>
+</ul>
+</li>
+</ul>
+<!-- ![skm.png](https://docimg1.docs.qq.com/image/AgAABTXAdCIsGwvoF8hDrrLq_BLJvyCw.png?w=1028&h=543) -->
