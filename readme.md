@@ -3,4 +3,4 @@
 一种新的输入方案，可以像超级简拼那样上手打词，只需打出声母，再输入形码筛选上屏。  
 一个字最多只用4个键，第2键就已经开始筛选，不会像拼音那样翻页。  
 
-[网站: srf.nnnye.com](srf.nnnye.com)
+[网站: srf.nnnye.com](https://srf.nnnye.com)
